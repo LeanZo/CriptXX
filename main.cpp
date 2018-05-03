@@ -113,10 +113,10 @@ static void encriptar(vector<char> (&fileLines), string (&cifraVigenere)[26][26]
             colunaID = 666;
         } else
         {
-            stringstream ss;
+            /*stringstream ss;
             ss << letra;
-            ss >> fraseEncriptada;
-            //fileLinesEncriptado.push_back(letra);
+            ss >> fraseEncriptada;*/
+            fileLinesEncriptado.push_back(letra);
 
         }
         std::copy(fraseEncriptada.begin(), fraseEncriptada.end(), std::back_inserter(fileLinesEncriptado));
@@ -211,9 +211,10 @@ static void decriptar(vector<char> (&fileLines), string (&cifraVigenere)[26][26]
         }
         else
         {
-            stringstream ss;
+            /*stringstream ss;
             ss << letra;
-            ss >> fraseDecriptada;
+            ss >> fraseDecriptada;*/
+			fraseDecriptada.push_back(letra);
         }
 
         std::copy(fraseDecriptada.begin(), fraseDecriptada.end(), std::back_inserter(fileLinesDecriptado));
